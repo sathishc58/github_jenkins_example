@@ -1,0 +1,5 @@
+INC=-I../include
+LIBS=../../libsvc/lib/libsvc.a
+
+result : ../src/result.c
+	{ xlC_r7 -qformat ${INC} ${LIBS} -o result ../src/result.c; mv result ../bin; }

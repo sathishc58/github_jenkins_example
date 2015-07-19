@@ -1,0 +1,15 @@
+INC=-I../include
+SRCS = ../libsrc/add.c ../libsrc/mult.c ../libsrc/sub.c ../libsrc/div.c
+OBJPATH = ../objects
+OBJECTS = add.o mult.o sub.o div.o
+
+${OBJECTS} : ${SRCS}
+	@echo ${value SRCS}
+        # Actual Expansion - { cc -c ../libsrc/add.c add.o ; mv add.o ../objects; }
+        # $< is name of dependency ie add.c
+        # $@ is name of target ie add.o
+	{ cc ${INC} -c $< -o $@ ; ar -qv libsvc.a $@; mv $@ ${OBJPATH}; }
+move :
+	mv *.a ../lib 
+clean:
+	rm ../lib/* ../objects/*

@@ -1,0 +1,15 @@
+INC=-I../include
+
+all : ../objects/add.o ../objects/mult.o
+	{ ar -cr libsvc.a ../objects/add.o ../objects/mult.o; mv libsvc.a ../lib; }
+
+add.o : ../libsrc/add.c
+	{ cc ${INC} -P ../libsrc/add.c; mv add.i ../preprocess; }
+	{ cc ${INC} -c ../libsrc/add.c; mv add.o ../objects; }
+
+mult.o : ../libsrc/mult.c
+	{ cc ${INC} -P ../libsrc/mult.c; mv mult.i ../preprocess; }
+	{ cc ${INC} -c ../libsrc/mult.c; mv mult.o ../objects; }
+
+#clean :
+#	{ rm ../lib/*; rm ../preprocess/*; rm ../objects/*; }
