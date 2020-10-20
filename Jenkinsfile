@@ -4,6 +4,6 @@ pipeline {
             stage('build') {
                 bat 'mvn --version'
             }
-        {
+        }
     }
 }
