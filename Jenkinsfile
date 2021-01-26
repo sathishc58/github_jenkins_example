@@ -6,9 +6,10 @@ pipeline {
                     
                     script {
                         dir(env.WORKSPACE)
-                        bat 'javac.exe HelloWorld.java'
-                        bat 'env.WORKSPACE\\javac.exe HelloWorld.java'
-                        bat 'java.exe HelloWorld'
+                        bat 'E:\Java\jdk1.8.0_231\javac.exe -version'
+                        // bat 'javac.exe HelloWorld.java'
+                        // bat 'env.WORKSPACE\\javac.exe HelloWorld.java'
+                        // bat 'java.exe HelloWorld'
                    }
                 }
            }
