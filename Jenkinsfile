@@ -4,9 +4,11 @@ pipeline {
             stage('buildandrun') {
                 steps { 
                     dir(env.WORKSPACE)
-                    javac.exe HelloWorld.java
-                    java.exe HelloWorld
-            }
-        }
-    }
-}
+                    script {
+                        javac.exe HelloWorld.java
+                        java.exe HelloWorld
+                   }
+               ]
+           }
+       }
+   }
