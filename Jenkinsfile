@@ -8,7 +8,7 @@ pipeline {
                         javac.exe HelloWorld.java
                         java.exe HelloWorld
                    }
-               ]
+                }
            }
        }
    }
