@@ -2,7 +2,7 @@ pipeline {
     agent any
         stages {
             stage('buildandrun') {
-                // steps { 
+                steps { 
                     
                     // script {
                         //dir(env.WORKSPACE)
@@ -11,7 +11,7 @@ pipeline {
                         // bat 'env.WORKSPACE\\javac.exe HelloWorld.java'
                         // bat 'java.exe HelloWorld'
                    // }
-                // }
+               }
            }
        }
    }
