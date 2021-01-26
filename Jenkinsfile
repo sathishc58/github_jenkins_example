@@ -3,8 +3,9 @@ pipeline {
         stages {
             stage('buildandrun') {
                 steps { 
-                    dir(env.WORKSPACE)
+                    
                     script {
+                        dir(env.WORKSPACE)
                         bat "javac.exe HelloWorld.java"
                         bat "java.exe HelloWorld"
                    }
