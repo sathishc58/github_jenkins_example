@@ -7,6 +7,7 @@ pipeline {
                     script {
                         dir(env.WORKSPACE)
                         bat 'javac.exe HelloWorld.java'
+                        bat 'env.WORKSPACE\\javac.exe HelloWorld.java'
                         bat 'java.exe HelloWorld'
                    }
                 }
