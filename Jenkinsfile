@@ -8,7 +8,9 @@ pipeline {
                             bat 'E:\\Java\\jdk1.8.0_231\\bin\\javac.exe -version'
                             bat 'E:\\Java\\jdk1.8.0_231\\bin\\javac.exe HelloWorld.java'
                             bat 'E:\\Java\\jdk1.8.0_231\\bin\\java HelloWorld'
-                            sh 'hello.sh'
+                            script {
+                                sh 'hello.sh'
+                            }
                         },
                         hw1: { 
                             bat 'E:\\Java\\jdk1.8.0_231\\bin\\javac.exe -version'
