@@ -9,7 +9,7 @@ pipeline {
                             bat 'E:\\Java\\jdk1.8.0_231\\bin\\javac.exe HelloWorld.java'
                             bat 'E:\\Java\\jdk1.8.0_231\\bin\\java HelloWorld'
                             script {
-                                sh './hello.sh'
+                                sh "./hello.sh"
                             }
                         },
                         hw1: { 
