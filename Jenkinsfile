@@ -9,7 +9,9 @@ pipeline {
                             bat 'E:\\Java\\jdk1.8.0_231\\bin\\javac.exe HelloWorld.java'
                             bat 'E:\\Java\\jdk1.8.0_231\\bin\\java HelloWorld'
                             script {
-                                sh "bash ./hello.sh"
+                                sh "chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}@script"
+                                sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/hello.sh"
+                               
                             }
                         },
                         hw1: { 
