@@ -1,7 +1,7 @@
 pipeline {
     agent any
         stages {
-            stage('buildandrun') {
+            stage('compileandrun') {
                 steps {
                     parallel (
                         hw: {
