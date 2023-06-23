@@ -1,1 +1,2 @@
 Created new file to generate new commit
+Added new line to explore git concepts
