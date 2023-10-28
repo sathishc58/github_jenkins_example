@@ -6,7 +6,7 @@ parameters {
 
 
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
+    agent any
         stages {
           stage('Git clone and environment setup') {
             steps{
@@ -19,7 +19,8 @@ pipeline {
         }
 }
 
-/* ( stage('build') {
+/* agent { docker { image 'maven:3.3.3' } }
+  ( stage('build') {
                 steps { 
                 bat 'mvn --version'
             }
