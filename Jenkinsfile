@@ -2,7 +2,7 @@ parameters {
         gitParameter branchFilter: 'origin/(.*)',
                      name: 'branchName', 
                      type: 'PT_BRANCH',
-m                    defaultValue: 'master'
+                     defaultValue: 'master'
 }
 
 pipeline {
